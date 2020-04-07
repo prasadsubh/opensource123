@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  </head>
+  <script>
+      function check(){
+        var name = document.getElementById("fname").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+        var pass2 = document.getElementById("pass2").value;
+        if(name ==''){
+          alert("Please Enter the Name!");
+        }
+        if(email ==''){
+          alert("Please Enter the Email!");
+        }
+        if(pass!=pass2){
+          alert("Password Doesn't Match!");
+        }
+      }
+  </script>
+  <body>
+    <div class="signup-form">
+      <form method="POST" action="action.php">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Full Name" name="fname" id="fname" class="txtb">
+        <input type="email" placeholder="Email" name="email" id="email"  class="txtb">
+        <input type="password" placeholder="Password" name="pass" id="pass" class="txtb">
+        <input type="password" placeholder="Confirm Password" name="pass2" id="pass2" class="txtb">
+        <input type="submit" value="Register" name="signup" onclick="return check()" class="signup-btn">
+        <a href="login.html">Already Have one ? LogIn</a>
+      </form>
+    </div>
+  </body>
+</html>
